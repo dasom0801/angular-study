@@ -1,0 +1,31 @@
+<div class="Container">
+  <h2>My TodoList</h2>
+  <ng-container *ngFor="let Todo of TodoList">
+    <div class="row">
+      <div class="col-md-2">Name: </div>
+      <div class="col-md-2 todo-item"> {{ Todo.title }} </div>
+      <div class="col-md-2">IsCompleted: </div>
+      <div class="col-md-2 todo-time"> {{ Todo.isCompleted }}</div>
+    </div>
+  </ng-container>
+</div>
+
+<hr/>
+
+<div class="container form-group" style="margin: 10px;">
+  <h3>Create New Todo </h3>
+  <div class="row">
+    <div class="form-group col-md-4">
+      <input [(ngModel)]="title" placeholder="Enter your Todo" class="form-control" style="min-width: 150px;">
+    </div>
+
+    <div class="col-md-2 form-check" style="margin-top: 10px; margin-left: 30px;">
+      <input type="checkbox" class="form-check-input" id="completed" [(ngModel)]="completed">
+      <label for="completed" class="form-check-label">Completed?</label>
+    </div>
+
+    <div class="col-md-2">
+        <button type="submit" class="btn btn-primary" (click)="createTodo()" style="Width:70px;">Add</button>
+     </div>
+  </div>
+</div>
