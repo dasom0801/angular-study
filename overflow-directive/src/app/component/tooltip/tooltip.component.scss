@@ -1,0 +1,17 @@
+:host {
+  position: absolute;
+  padding: 5px 10px;
+  background: darksalmon;
+  color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent darksalmon transparent;
+  }
+}
